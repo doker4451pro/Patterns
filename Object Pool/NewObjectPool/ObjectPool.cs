@@ -43,6 +43,13 @@ public class ObjectPool : MonoBehaviour
                     gameObject = list[i];
                 }
             }
+            
+            if (gameObject == null)
+            {
+                gameObject = Instantiate(list[0]);
+                list.Add(gameObject);
+            }
+            
             gameObject = Instantiate(list[0]);
             list.Add(gameObject);
 
